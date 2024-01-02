@@ -1,0 +1,33 @@
+plugins {
+    id 'java'
+    id 'com.github.johnrengelman.shadow' version '8.1.1'
+}
+
+group = 'com.zszf'
+version = '1.0-SNAPSHOT'
+
+repositories {
+    mavenCentral()
+    maven {
+        name "leavesmcRepositorySnapshots"
+        url "https://repo.leavesmc.top/snapshots"
+    }
+}
+
+dependencies {
+    testImplementation platform('org.junit:junit-bom:5.9.1')
+    testImplementation 'org.junit.jupiter:junit-jupiter'
+    compileOnly 'top.leavesmc.leaves:leaves-api:1.20.1-R0.1-SNAPSHOT'
+}
+
+test {
+    useJUnitPlatform()
+}
+
+java{
+    toolchain.languageVersion.set(JavaLanguageVersion.of(17))
+}
+
+tasks.withType(JavaCompile){
+    options.encoding = 'UTF-8'
+}

@@ -1,0 +1,16 @@
+name: FakePlayerUtil
+version: 0.0.1-SNAPSHOT
+main: com.zszf.FakePlayerUtil.PluginMain
+author: zszf
+permissions:
+  fakePlayerUtil.cmd:
+    description: "fakePlayerUtilCommandPermission"
+    default: op
+    children:
+      fakePlayerUtil.cmd.player: op
+commands:
+  player:
+    description: "player control"
+    usage: "/player <arg> [arg] [arg]"
+    permission: fakePlayerUtil.cmd.player
+    permission-message: "You do not have permission to use this command"

@@ -1,0 +1,11 @@
+pluginManagement {
+    repositories {
+        maven{
+            name 'aliyunGradlePluginMirror'
+            url 'https://maven.aliyun.com/repository/gradle-plugin'
+        }
+    }
+}
+
+rootProject.name = 'FakePlayerUtil'
+
