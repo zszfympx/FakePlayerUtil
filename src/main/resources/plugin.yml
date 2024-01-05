@@ -7,7 +7,7 @@ permissions:
     description: "fakePlayerUtilCommandPermission"
     default: op
     children:
-      fakePlayerUtil.cmd.player: op
+      fakePlayerUtil.cmd.player: true
 commands:
   player:
     description: "player control"
